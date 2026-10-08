@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Portfolio | ICT251 Activity 3</title>
+  <!-- Linking our paint file (CSS) and control script (JS) -->
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+
+  <!-- 1. The Header & Navigation Bar -->
+  <header>
+    <div class="header-container">
+      <div class="logo">My Portfolio</div>
+      <button id="mobile-nav-toggle" aria-label="Toggle Menu">☰ Menu</button>
+      <nav id="main-nav">
+  <ul style="display: flex; flex-direction: row; gap: 1rem; list-style: none;">
+    <li><a href="#about">About Me</a></li>
+    <li><a href="#hobbies">Hobbies</a></li>
+    <li><a href="#learning">Learning Plan</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#gallery">Photos</a></li>
+    <li><a href="#media">Media</a></li>
+    <li><a href="#tools">Calculator</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+      <button id="theme-toggle-btn" class="btn-secondary">🌙 Dark Mode</button>
+    </div>
+  </header>
+
+  <!-- 2. Intro / Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="hero-content">
+      <h1>Hello, my name is Gloria Bhuta</h1>
+      <p class="subtitle">BSc in Computer Science Student at Mulungushi University</p>
+      <p class="intro-text">
+        Welcome to my interactive personal website for ICT251 Web Technologies.
+      </p>
+      <a href="#projects" class="btn-primary">View My Projects</a>
+    </div>
+  </section>
+
+  <main>
+    <!-- 3. About Me Section (Must be at least 50 words) -->
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I am a dedicated Computer Science student at Mulungushi University with a strong passion for software engineering and web development. My goal is to build scalable, user-friendly web applications that solve real-world problems. Throughout my academic journey, I have gained hands-on experience in computer programming, database systems, and modern web frameworks. I thrive in collaborative learning environments and constantly seek to expand my knowledge.
+      </p>
+    </section>
+
+<!-- 4. Hobbies Section (At least 3 hobbies) -->
+<section id="hobbies">
+  <h2>My Hobbies</h2>
+  <ul>
+    <li><strong>Coding and learning web design:</li>
+    <li><strong>Listening to music and podcasts:.</li>
+    <li><strong>Playing sports and staying active.</li>
+  </ul>
+</section>
+
+    <!-- 5. Learning Plan Section -->
+    <section id="learning">
+      <h2>My Learning Plan</h2>
+      <ol>
+        <li>Master basic HTML, CSS, and JavaScript.</li>
+        <li>Learn back-end databases and APIs.</li>
+        <li>Deploy website applications online.</li>
+      </ol>
+
+      <h3>Learning Schedule</h3>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Topic</th>
+              <th>Duration</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>HTML5 Forms & Formatting</td>
+              <td>2 Weeks</td>
+              <td>Completed</td>
+            </tr>
+            <tr>
+              <td>CSS Styles & Layouts</td>
+              <td>3 Weeks</td>
+              <td>Completed</td>
+            </tr>
+            <tr>
+              <td>JavaScript DOM & Events</td>
+              <td>4 Weeks</td>
+              <td>In Progress</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 6. Projects & Skills Section -->
+    <section id="projects">
+      <h2>Projects & Skills</h2>
+      <div class="filter-controls">
+        <button class="filter-btn active" data-category="all">All</button>
+        <button class="filter-btn" data-category="frontend">Front-End</button>
+        <button class="filter-btn" data-category="backend">Back-End</button>
+        <button id="reset-filter-btn" class="btn-secondary">Reset</button>
+      </div>
+      <div id="filter-message" class="filter-message"></div>
+
+      <div class="projects-grid">
+        <article class="project-card" data-category="frontend">
+          <h3>Personal Portfolio Website</h3>
+          <p class="tag">Front-End</p>
+          <p>My interactive HTML, CSS, and JS student portfolio.</p>
+        </article>
+
+        <article class="project-card" data-category="backend">
+          <h3>Student Record System</h3>
+          <p class="tag">Back-End</p>
+          <p>A simple database project for managing grades.</p>
+        </article>
+
+        <article class="project-card" data-category="frontend">
+          <h3>Interactive Quiz App</h3>
+          <p class="tag">Front-End</p>
+          <p>A web quiz application built using JavaScript events.</p>
+        </article>
+      </div>
+    </section>
+
+<!-- 7. Photo Gallery Section -->
+<section id="gallery">
+  <h2>My Photos</h2>
+  <div class="gallery-container">
+    <div class="gallery-display">
+      <img id="gallery-img" src="images/photo1.jpeg" alt="A day off from studying at the campus">
+      <p id="gallery-caption" class="caption">A day off from studying at the campus</p>
+    </div>
+    <div class="gallery-controls" style="display: flex; align-items: center; justify-content: center; gap: 1rem; margin-top: 1rem;">
+      <button id="prev-photo-btn" type="button" class="btn-secondary">&laquo; Previous</button>
+      <span id="photo-counter" style="font-weight: bold;">Photo 1 of 3</span>
+      <button id="next-photo-btn" type="button" class="btn-secondary">Next &raquo;</button>
+    </div>
+  </div>
+</section>
+
+    <!-- 8. Media Section -->
+    <section id="media">
+      <h2>My Media</h2>
+      <article class="media-item">
+        <h3>Introductory Video</h3>
+        <p>A short video about my academic journey.</p>
+        <video controls width="100%">
+          <source src="videos/video.mp4" type="video/mp4">
+          Your browser does not support video.
+        </video>
+      </article>
+
+      <article class="media-item">
+        <h3>Audio Log</h3>
+        <p>An audio clip describing my Activity 3 goals.</p>
+        <audio controls>
+          <source src="videos/voice.mp3" type="audio/mpeg">
+          Your browser does not support audio.
+        </audio>
+      </article>
+    </section>
+
+    <!-- 9. Study Calculator Tool -->
+    <section id="tools">
+      <h2>Study Hours Calculator</h2>
+      <form id="calc-form">
+        <div class="form-group">
+          <label for="calc-hours">Planned Hours Per Day (0 - 24):</label>
+          <input type="number" id="calc-hours" min="0" max="24" required>
+        </div>
+        <div class="form-group">
+          <label for="calc-days">Days Per Week (1 - 7):</label>
+          <input type="number" id="calc-days" min="1" max="7" required>
+        </div>
+        <button type="submit" class="btn-primary">Calculate</button>
+      </form>
+      <div id="calc-result" class="result-box"></div>
+    </section>
+
+    <!-- 10. Contact Form Section -->
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <p><em>Browser demonstration only — no message is sent.</em></p>
+
+      <form id="contact-form" novalidate>
+        <div class="form-group">
+          <label for="contact-name">Full Name *</label>
+          <input type="text" id="contact-name" name="name" required>
+          <span class="error-msg" id="name-error"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="contact-email">Email Address *</label>
+          <input type="email" id="contact-email" name="email" required>
+          <span class="error-msg" id="email-error"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="contact-message">Message *</label>
+          <textarea id="contact-message" name="message" rows="4" required></textarea>
+          <span class="error-msg" id="message-error"></span>
+        </div>
+
+        <button type="submit" class="btn-primary">Submit Form</button>
+      </form>
+
+<div id="form-summary-box" class="summary-box hidden"></div>
+  </section>
+</main>
+
+<!-- 11. Footer -->
+<footer>
+  <p>&copy; 2026 Mulungushi University | ICT251 Activity 3</p>
+  <p>
+<a id="github-link" href="https://github.com/01bhuta-dot" target="_blank" rel="noopener noreferrer">View Source on GitHub</a>
+  </p>
+</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
