@@ -116,4 +116,43 @@ footer {
     padding: 15px;
     background-color: #2c3e50;
     color: white;
+}/* Splash Screen Styling */
+/* Hero Welcome Banner */
+#welcome-hero {
+  background: linear-gradient(135deg, #e6e6fa 0%, #d8b4fe 100%); /* Light purple gradient */
+  text-align: center;
+  padding: 60px 20px;
+  color: #2d004d;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: #4a154b;
+}
+
+.hero-content .sub-title {
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.hero-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: #6a0dad;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.hero-btn:hover {
+  background-color: #52098b;
 }

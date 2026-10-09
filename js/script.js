@@ -32,4 +32,3 @@ document.addEventListener('DOMContentLoaded', () => {
     currentIndex = (currentIndex + 1) % photos.length;
     updateGallery(currentIndex);
   });
-});
